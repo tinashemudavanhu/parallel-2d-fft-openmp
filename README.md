@@ -37,10 +37,10 @@ for (i = 0; i < n1; i++) {
 This approach avoids race conditions and allows concurrent execution across multiple rows.
 
 ## Project Structure
-src/            Core FFT implementation
-benchmarks/     Performance testing programs
-sample/         Original test harness from Ooura
-Build
+
+- `src/` — Core FFT implementation  
+- `benchmarks/` — Performance testing programs  
+- `sample/` — Original test harness from Ooura  
 
 ## Compile the project using GCC with OpenMP support:
 ```c
