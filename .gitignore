@@ -1,0 +1,24 @@
+# Compiled binaries
+bench2d_omp
+bench2d_serial
+bench2d_serial_ref
+bench_cdft2d_omp
+bench_cdft2d_serial
+bench_cdft2d_serial_ref
+fftsg2dt_serial
+
+# Object and binary files
+*.o
+*.out
+*.exe
+*.a
+
+# Logs and temp files
+*.log
+*.tmp
+
+# System files
+.DS_Store
+Thumbs.db
+*.f
+*.bak
