@@ -33,33 +33,34 @@ The primary parallelization target is the row-wise FFT loop, where each iteratio
 for (i = 0; i < n1; i++) {
     // Apply FFT to each row independently
 }
-
+```
 This approach avoids race conditions and allows concurrent execution across multiple rows.
 
-Project Structure
+## Project Structure
 src/            Core FFT implementation
 benchmarks/     Performance testing programs
 sample/         Original test harness from Ooura
 Build
 
-Compile the project using GCC with OpenMP support:
-
+## Compile the project using GCC with OpenMP support:
+```c
 gcc -O3 -fopenmp src/fftsg.c src/fftsg2d_v1.c -o fft2d -lm
 Run
 ./fft2d
-Correctness
+```
+## Correctness
 
 The parallel implementation has been tested against the serial version to ensure correctness. Observed numerical differences are minimal and consistent with floating-point precision limits.
 
-Limitations
+## Limitations
 Parallelization is currently limited to selected portions of the code
 Full performance benchmarking and scalability analysis are in progress
 Additional optimization opportunities (e.g., column-wise parallelization) have not yet been implemented
-Future Work
+## Future Work
 Extend parallelization to column-wise transforms
 Explore OpenMP scheduling strategies and loop collapsing
 Perform detailed performance benchmarking and speedup analysis
 Evaluate scalability on multi-core systems
-Acknowledgment
+## Acknowledgment
 
 The original FFT routines are based on Ooura’s FFT library. Modifications in this project focus on parallel execution and performance evaluation.
