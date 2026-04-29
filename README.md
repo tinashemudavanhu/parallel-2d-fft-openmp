@@ -31,12 +31,12 @@ At this stage:
 Parallelization is applied to both stages of the 2D FFT:
 
 Row-wise transform:
-
+```bash
 #pragma omp parallel for
 for (i = 0; i < n1; i++) {
     // Apply FFT across each row
 }
-
+```
 Column-direction processing is handled inside cdft2d_sub and is also parallelized.
 
 ## Project Structure
