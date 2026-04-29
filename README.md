@@ -40,23 +40,25 @@ for (i = 0; i < n1; i++) {
 Column-direction processing is handled inside cdft2d_sub and is also parallelized.
 
 ## Project Structure
-
+```
 parallel-2d-fft-openmp/
 ├── src/
 ├── sample/sample2d/
 ├── results/
 ├── readme2d.txt
 └── README.md
+```
 
 ## Build
 
 From sample/sample2d:
 
+```bash
 gcc -O2 -Wall -fopenmp bench_cdft2d.c ../../src/fftsg2d_v1.c ../../src/fftsg.c ../../src/alloc.c -lm -o bench_cdft2d_omp
-
+```
 ## Run
 
-printf "16384\n32768\n" | ./bench_cdft2d_omp
+```printf "16384\n32768\n" | ./bench_cdft2d_omp```
 
 ## Execution Environment
 
@@ -67,14 +69,19 @@ DARWIN HPC:
 - Cores: 64
 - Memory: ~488 GB
 
+```markdown
 ## Performance Results
 
-Threads | 16384x32768 | 32768x65536
-8  | 2.79 | 13.11
-16 | 2.31 | 7.96
-32 | 1.67 | 6.38
-64 | 1.22 | 6.05
+### Runtime (seconds)
 
+| Threads | 16384 × 32768 | 32768 × 65536 |
+|--------|--------------|--------------|
+| 8      | 2.79         | 13.11        |
+| 16     | 2.31         | 7.96         |
+| 32     | 1.67         | 6.38         |
+| 64     | 1.22         | 6.05         |
+
+```
 ## Observations
 
 - Strong scaling up to 32 threads
