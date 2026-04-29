@@ -1,0 +1,94 @@
+/var/spool/slurm/job6199733/slurm_script: line 10: workgroup: command not found
+==================================================
+FFT 2D OpenMP Scaling Run
+Allocated CPUs from Slurm: 64
+Job started at: Wed Apr 29 12:10:38 EDT 2026
+==================================================
+
+==================================================
+THREAD COUNT: 8
+Start time: Wed Apr 29 12:10:38 EDT 2026
+==================================================
+
+----- Running size: 16384 x 32768 -----
+data length n1=? (n1 = power of 2)
+data length n2=? (n2 = power of 2)
+cdft2d err= 1.58207e-15
+cdft2d time (forward+inverse) = 2.790272 s
+----- Finished size: 16384 x 32768 at Wed Apr 29 12:10:52 EDT 2026 -----
+
+----- Running size: 32768 x 65536 -----
+data length n1=? (n1 = power of 2)
+data length n2=? (n2 = power of 2)
+cdft2d err= 1.67921e-15
+cdft2d time (forward+inverse) = 13.110458 s
+----- Finished size: 32768 x 65536 at Wed Apr 29 12:11:47 EDT 2026 -----
+
+Finished THREAD COUNT: 8 at Wed Apr 29 12:11:47 EDT 2026
+
+==================================================
+THREAD COUNT: 16
+Start time: Wed Apr 29 12:11:47 EDT 2026
+==================================================
+
+----- Running size: 16384 x 32768 -----
+data length n1=? (n1 = power of 2)
+data length n2=? (n2 = power of 2)
+cdft2d err= 1.58207e-15
+cdft2d time (forward+inverse) = 2.308130 s
+----- Finished size: 16384 x 32768 at Wed Apr 29 12:11:59 EDT 2026 -----
+
+----- Running size: 32768 x 65536 -----
+data length n1=? (n1 = power of 2)
+data length n2=? (n2 = power of 2)
+cdft2d err= 1.67921e-15
+cdft2d time (forward+inverse) = 7.957592 s
+----- Finished size: 32768 x 65536 at Wed Apr 29 12:12:47 EDT 2026 -----
+
+Finished THREAD COUNT: 16 at Wed Apr 29 12:12:47 EDT 2026
+
+==================================================
+THREAD COUNT: 32
+Start time: Wed Apr 29 12:12:47 EDT 2026
+==================================================
+
+----- Running size: 16384 x 32768 -----
+data length n1=? (n1 = power of 2)
+data length n2=? (n2 = power of 2)
+cdft2d err= 1.58207e-15
+cdft2d time (forward+inverse) = 1.671715 s
+----- Finished size: 16384 x 32768 at Wed Apr 29 12:12:58 EDT 2026 -----
+
+----- Running size: 32768 x 65536 -----
+data length n1=? (n1 = power of 2)
+data length n2=? (n2 = power of 2)
+cdft2d err= 1.67921e-15
+cdft2d time (forward+inverse) = 6.377015 s
+----- Finished size: 32768 x 65536 at Wed Apr 29 12:13:42 EDT 2026 -----
+
+Finished THREAD COUNT: 32 at Wed Apr 29 12:13:42 EDT 2026
+
+==================================================
+THREAD COUNT: 64
+Start time: Wed Apr 29 12:13:42 EDT 2026
+==================================================
+
+----- Running size: 16384 x 32768 -----
+data length n1=? (n1 = power of 2)
+data length n2=? (n2 = power of 2)
+cdft2d err= 1.58207e-15
+cdft2d time (forward+inverse) = 1.222173 s
+----- Finished size: 16384 x 32768 at Wed Apr 29 12:13:53 EDT 2026 -----
+
+----- Running size: 32768 x 65536 -----
+data length n1=? (n1 = power of 2)
+data length n2=? (n2 = power of 2)
+cdft2d err= 1.67921e-15
+cdft2d time (forward+inverse) = 6.047082 s
+----- Finished size: 32768 x 65536 at Wed Apr 29 12:14:36 EDT 2026 -----
+
+Finished THREAD COUNT: 64 at Wed Apr 29 12:14:36 EDT 2026
+
+==================================================
+All runs completed at: Wed Apr 29 12:14:36 EDT 2026
+==================================================
