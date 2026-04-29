@@ -34,20 +34,40 @@ for (i = 0; i < n1; i++) {
     // Apply FFT to each row independently
 }
 ```
+
 This approach avoids race conditions and allows concurrent execution across multiple rows.
 
 ## Project Structure
 
-- `src/` — Core FFT implementation  
-- `benchmarks/` — Performance testing programs  
-- `sample/` — Original test harness from Ooura  
+- `src/` — Core FFT implementation and OpenMP-modified source
+- `sample/sample2d/` — Active benchmark and test harness for `cdft2d`
+- `readme2d.txt` — Original Ooura documentation
 
-## Compile the project using GCC with OpenMP support:
-```c
-gcc -O3 -fopenmp src/fftsg.c src/fftsg2d_v1.c -o fft2d -lm
-Run
+## Build
+
+Compile the OpenMP version from the project root:
+
+```bash
+gcc -O3 -fopenmp src/fftsg.c src/fftsg2d_v1.c src/alloc.c -o fft2d -lm
+```
+
+## Run
+
+Run the compiled program:
+
+```bash
 ./fft2d
 ```
+
+For the active benchmark workflow, use the sample benchmark directory:
+
+```bash
+cd sample/sample2d
+./bench_cdft2d_omp
+```
+
+Enter `n1` and `n2` when prompted. Both values should be powers of 2.
+
 ## Correctness
 
 The parallel implementation has been tested against the serial version to ensure correctness. Observed numerical differences are minimal and consistent with floating-point precision limits.
