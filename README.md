@@ -69,10 +69,11 @@ DARWIN HPC:
 - Cores: 64
 - Memory: ~488 GB
 
-```markdown
+
 ## Performance Results
 
 ### Runtime (seconds)
+```markdown
 
 | Threads | 16384 × 32768 | 32768 × 65536 |
 |--------|--------------|--------------|
